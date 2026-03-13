@@ -1,0 +1,104 @@
+.education {
+  padding: 6rem 2rem;
+  background: var(--background);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin: 0 0 3rem 0;
+  text-align: center;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+}
+
+.degree {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 0.5rem 0;
+}
+
+.institution {
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.year {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--foreground);
+  opacity: 0.85;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: 4rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+}
